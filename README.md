@@ -1,6 +1,19 @@
 # D&D Dice Roller Simulator - Marketing Site
 
+🎲 **[Live Demo](https://tiation.github.io/dice-roller-marketing-site/)** | 📱 **[iOS App](https://github.com/tiation/DiceRollerSimulator)**
+
 A sleek, dark neon-themed marketing website for the [D&D Dice Roller Simulator](https://github.com/tiation/DiceRollerSimulator) iOS app.
+
+## 📸 Screenshots
+
+### Hero Section
+![Hero Section](images/hero-screenshot.png)
+
+### Features Overview
+![Features](images/features-screenshot.png)
+
+### Mobile Responsive
+![Mobile View](images/mobile-screenshot.png)
 
 ## 🎯 About
 
