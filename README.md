@@ -1,8 +1,17 @@
-# D&D Dice Roller Simulator - Marketing Site
+# Tiation D&D Dice Roller - Marketing Hub
 
-🎲 **[Live Demo](https://tiation.github.io/dice-roller-marketing-site/)** | 📱 **[iOS App](https://github.com/tiation/DiceRollerSimulator)**
+<div align="center">
+  <img src="assets/tiation-logo.svg" alt="Tiation Logo" width="200" height="200">
+  
+  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+  [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-green.svg)](https://tiation.github.io/dice-roller-marketing-site)
+  [![Enterprise Grade](https://img.shields.io/badge/Enterprise-Grade-gold.svg)](https://github.com/tiation)
+  [![Tiation](https://img.shields.io/badge/Powered%20by-Tiation-cyan.svg)](https://github.com/tiation)
+</div>
 
-A sleek, dark neon-themed marketing website for the [D&D Dice Roller Simulator](https://github.com/tiation/DiceRollerSimulator) iOS app.
+## 🚀 Overview
+
+Enterprise-grade marketing platform for the [Tiation D&D Dice Roller Simulator](https://github.com/tiation/DiceRollerSimulator) - a professional iOS application designed for tabletop RPG enthusiasts and gaming organizations. This marketing hub showcases our cutting-edge SwiftUI-based dice rolling solution with comprehensive documentation and enterprise support.
 
 ## 📸 Screenshots
 
@@ -15,18 +24,36 @@ A sleek, dark neon-themed marketing website for the [D&D Dice Roller Simulator](
 ### Mobile Responsive
 ![Mobile View](images/mobile-screenshot.png)
 
-## 🎯 About
+---
 
-This marketing site promotes the D&D Dice Roller Simulator - a SwiftUI-based iOS application for tabletop RPG enthusiasts. The site features a modern dark neon theme with cyan gradient flares, creating an immersive experience that matches the excitement of tabletop gaming.
+## 📋 Table of Contents
+
+- [Features](#-features)
+- [Quick Start](#-quick-start)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Documentation](#-documentation)
+- [Screenshots](#-screenshots)
+- [FAQ](#-faq)
+- [Contributing](#-contributing)
+- [Support](#-support)
+- [License](#-license)
+- [About Tiation](#-about-tiation)
+
+---
 
 ## ✨ Features
 
-- **Dark Neon Theme**: Eye-catching design with cyan gradient flares
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Interactive Elements**: Hover effects, animations, and smooth scrolling
-- **App Showcase**: Highlights all key features of the dice roller app
-- **GitHub Integration**: Direct links to the open-source repository
-- **Performance Optimized**: Fast loading with minimal dependencies
+- **🎨 Dark Neon Theme**: Enterprise-grade design with cyan/magenta gradient flares
+- **📱 Responsive Design**: Works seamlessly across all devices and screen sizes
+- **⚡ Interactive Elements**: Smooth animations, hover effects, and fluid transitions
+- **🎯 App Showcase**: Comprehensive feature demonstration and use cases
+- **🔧 GitHub Integration**: Direct links to open-source repository and documentation
+- **🚀 Performance Optimized**: Fast loading with minimal dependencies and CDN delivery
+- **🛡️ Enterprise Security**: Secure hosting with SSL and enterprise-grade infrastructure
+- **📊 Analytics Ready**: Built-in support for enterprise analytics and tracking
+- **🌐 Multi-platform Support**: Desktop, tablet, and mobile compatibility
+- **🎮 Gaming-focused UX**: Tailored specifically for tabletop RPG communities
 
 ## 🎨 Design Elements
 
@@ -145,27 +172,127 @@ The site uses CSS custom properties for easy theme customization:
 - Alt text for images
 - Schema markup ready
 
-## 🔧 Future Enhancements
+---
 
-- [ ] Add screenshot galleries
-- [ ] Include video demonstrations
-- [ ] Implement contact forms
-- [ ] Add social media integration
-- [ ] Include user testimonials
-- [ ] Add blog/news section
+## 📚 Documentation
 
-## 📄 License
+- **[User Guide](docs/user-guide.md)** - Complete marketing site user documentation
+- **[API Reference](docs/api-reference.md)** - Technical integration documentation
+- **[Architecture](docs/architecture.md)** - Site architecture and design system
+- **[Deployment Guide](docs/deployment.md)** - Production deployment instructions
+- **[Developer Guide](docs/developer-guide.md)** - Development setup and guidelines
 
-This marketing site is part of the Tiation GitHub ecosystem and follows the same open-source principles as the main application.
+### Live Documentation
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit pull requests or open issues for improvements.
-
-## 📞 Support
-
-For questions or support related to the D&D Dice Roller Simulator app, please visit the [GitHub Issues](https://github.com/tiation/DiceRollerSimulator/issues) page.
+Visit our [GitHub Pages site](https://tiation.github.io/dice-roller-marketing-site) for interactive documentation and live demos.
 
 ---
 
-Built with ❤️ for the tabletop RPG community as part of the Tiation GitHub ecosystem.
+## ❓ FAQ
+
+### General Questions
+
+**Q: What makes this marketing site enterprise-grade?**
+A: Our marketing platform includes comprehensive analytics, security features, scalability, and professional support with enterprise-grade infrastructure.
+
+**Q: Is this compatible with existing marketing systems?**
+A: Yes, we provide extensive integration capabilities with popular marketing platforms and analytics tools.
+
+**Q: What support options are available?**
+A: We offer community support through GitHub Issues and professional enterprise support for commercial users.
+
+### Technical Questions
+
+**Q: What are the system requirements?**
+A: The marketing site works in all modern web browsers. No special requirements for viewing. For development, you need a local web server.
+
+**Q: How do I customize the theme?**
+A: The site uses CSS custom properties for easy theme customization. See our [Developer Guide](docs/developer-guide.md) for detailed instructions.
+
+**Q: Can I integrate this with my existing website?**
+A: Yes, the marketing components are designed to be embeddable and customizable for integration with existing websites.
+
+### Troubleshooting
+
+**Q: Images not loading properly**
+A: Ensure you're serving the site from a web server rather than opening the HTML file directly. See our [troubleshooting guide](docs/troubleshooting.md).
+
+**Q: Performance optimization**
+A: Refer to our [Performance Guide](docs/performance.md) for optimization strategies and best practices.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Development Setup
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
+
+### Code of Conduct
+
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+
+---
+
+## 🆘 Support
+
+### Community Support
+
+- **GitHub Issues**: [Report bugs or request features](https://github.com/tiation/dice-roller-marketing-site/issues)
+- **Discussions**: [Join community discussions](https://github.com/tiation/dice-roller-marketing-site/discussions)
+- **Documentation**: [Browse our documentation](https://tiation.github.io/dice-roller-marketing-site)
+
+### Enterprise Support
+
+For enterprise customers, we offer:
+- Priority support
+- Custom development
+- Training and consultation
+- SLA guarantees
+
+Contact us at [enterprise@tiation.com](mailto:enterprise@tiation.com)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🌟 About Tiation
+
+**Tiation** is a leading provider of enterprise-grade software solutions, specializing in automation, productivity, and system integration tools. Our mission is to empower organizations with cutting-edge technology that drives efficiency and innovation.
+
+### Our Solutions
+
+- **Gaming Platform**: Professional tabletop RPG and gaming solutions
+- **Marketing Tools**: Enterprise-grade marketing and promotional platforms
+- **Developer Tools**: Professional development and deployment solutions
+- **Enterprise Integration**: Seamless system integration capabilities
+
+### Connect With Us
+
+- **Website**: [https://github.com/tiation](https://github.com/tiation)
+- **GitHub**: [https://github.com/tiation](https://github.com/tiation)
+- **LinkedIn**: [Tiation Company](https://linkedin.com/company/tiation)
+- **Twitter**: [@TiationTech](https://twitter.com/TiationTech)
+
+---
+
+<div align="center">
+  <p>
+    <strong>Built with ❤️ by the Tiation Team</strong>
+  </p>
+  <p>
+    <a href="https://github.com/tiation">
+      <img src="https://img.shields.io/badge/Powered%20by-Tiation-cyan.svg" alt="Powered by Tiation">
+    </a>
+  </p>
+</div>

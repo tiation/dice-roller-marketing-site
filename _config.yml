@@ -1,0 +1,74 @@
+# GitHub Pages Configuration for Tiation D&D Dice Roller Marketing Hub
+
+# Site Settings
+title: "Tiation D&D Dice Roller - Marketing Hub"
+description: "Enterprise-grade marketing platform for the Tiation D&D Dice Roller Simulator iOS app"
+baseurl: "/dice-roller-marketing-site"
+url: "https://tiation.github.io"
+
+# Author Information
+author:
+  name: "Tiation Team"
+  email: "enterprise@tiation.com"
+  url: "https://github.com/tiation"
+
+# Theme Configuration
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Markdown Configuration
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Build Settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Documentation"
+    url: "/docs/"
+  - title: "Features"
+    url: "/#features"
+  - title: "FAQ"
+    url: "/#faq"
+  - title: "Support"
+    url: "/#support"
+
+# Social Links
+social:
+  github: "tiation"
+  linkedin: "company/tiation"
+  twitter: "TiationTech"
+
+# SEO
+seo:
+  type: "Organization"
+  name: "Tiation"
+  logo: "assets/tiation-logo.svg"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
