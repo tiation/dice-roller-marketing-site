@@ -1,288 +1,296 @@
-# dice-roller-marketing-site
+# 🎲 DnD Dice Roller SaaS Platform
 
-<div align="center">
+Enterprise-grade dice rolling platform for D&D and tabletop RPGs with subscription management, team collaboration, and comprehensive API access.
 
-![dice-roller-marketing-site Banner](https://img.shields.io/badge/🔮_TIATION_ECOSYSTEM-dice-roller-marketing-site-00FFFF?style=for-the-badge&labelColor=0A0A0A&color=00FFFF)
-
-**Enterprise-grade solution: dice-roller-marketing-site**
-
-*Professional • Scalable • Mission-Driven*
-
-[![🌐_Live_Demo](https://img.shields.io/badge/🌐_Live_Demo-View_Project-00FFFF?style=flat-square&labelColor=0A0A0A)](https://tiation.github.io/dice-roller-marketing-site)
-[![📚_Documentation](https://img.shields.io/badge/📚_Documentation-Complete-007FFF?style=flat-square&labelColor=0A0A0A)](https://tiation.github.io/dice-roller-marketing-site)
-[![🏗️_Architecture](https://img.shields.io/badge/🏗️_Architecture-Diagram-FF00FF?style=flat-square&labelColor=0A0A0A)](https://tiation.github.io/dice-roller-marketing-site/architecture)
-[![⚡_Status](https://img.shields.io/badge/⚡_Status-Active Development-FF00FF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/dice-roller-marketing-site)
-[![📄_License](https://img.shields.io/badge/📄_License-MIT-00FFFF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/dice-roller-marketing-site/blob/main/LICENSE)
-
-</div>
-
-## 🚀 Overview
-
-Enterprise-grade solution: dice-roller-marketing-site
-
-### ✨ Key Features
-
-- 🎯 **Feature 1** - Description 1
-- 🔧 **Feature 2** - Description 2
-- 🌟 **Feature 3** - Description 3
-- 🛡️ **Feature 4** - Description 4
-
----
-
-## 🏗️ Architecture
-
-![Architecture Diagram](assets/architecture/dice-roller-marketing-site-architecture.svg)
-
-### System Components
-
-```mermaid
-graph TB
-    A[Component 1] --> B[Component 2]
-    B --> C[Component 3]
-    C --> D[Component 4]
-    
-    style A fill:#00ffff,stroke:#ff00ff,stroke-width:2px
-    style B fill:#ff00ff,stroke:#00ffff,stroke-width:2px
-    style C fill:#00ffff,stroke:#ff00ff,stroke-width:2px
-    style D fill:#ff00ff,stroke:#00ffff,stroke-width:2px
-```
-
-### Technology Stack
-
-- **Frontend**: Modern Frontend
-- **Backend**: Scalable Backend
-- **Database**: Database
-- **Infrastructure**: Infrastructure
-
----
-
-## 📋 Table of Contents
-
-- [Features](#-features)
-- [Quick Start](#-quick-start)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Documentation](#-documentation)
-- [Screenshots](#-screenshots)
-- [FAQ](#-faq)
-- [Contributing](#-contributing)
-- [Support](#-support)
-- [License](#-license)
-- [About Tiation](#-about-tiation)
-
----
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-green.svg)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue.svg)
+![React](https://img.shields.io/badge/React-18-blue.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)
 
 ## ✨ Features
 
-{{FEATURES_LIST}}
+### 🎯 **Core Dice Rolling**
+- Support for all standard D&D dice (d4, d6, d8, d10, d12, d20, d100)
+- Custom dice with any number of sides
+- Advanced modifiers and calculations
+- Roll history and analytics
+- Real-time multiplayer sessions
 
----
+### 💳 **Subscription Management**
+- **Free Tier**: 100 API calls/month
+- **Pro Tier**: 10,000 API calls/month ($19.99)
+- **Enterprise Tier**: 100,000 API calls/month ($99.99)
+- Stripe integration with automatic billing
+- Usage-based rate limiting
 
-## 🏃‍♂️ Quick Start
+### 🏢 **Enterprise Features**
+- Team and organization management
+- SSO integration ready
+- Admin dashboard with analytics
+- White-label options
+- Custom webhook integrations
+- GDPR compliance (data export/deletion)
 
+### 🔧 **Developer API**
+- RESTful API with comprehensive documentation
+- Authentication via API keys or JWT
+- Rate limiting based on subscription tier
+- Real-time WebSocket support
+- SDK examples for popular languages
+
+## 🚀 **Quick Deployment**
+
+### **Prerequisites**
+- VPS with SSH access (minimum 2GB RAM, 20GB storage)
+- Domain name pointed to your VPS IP
+- SSH keys configured for passwordless access
+
+### **One-Command Deployment**
 ```bash
-# Clone the repository
-git clone https://github.com/tiation/dice-roller-marketing-site.git
-cd dice-roller-marketing-site
+# Configure your environment
+export VPS_HOST="your-vps-ip"
+export DOMAIN="your-domain.com"
+export VPS_USER="root"
 
-# Install dependencies
-{{INSTALL_COMMANDS}}
-
-# Run the application
-{{RUN_COMMANDS}}
+# Run automated deployment
+./deploy.sh
 ```
 
----
+The deployment script will:
+1. ✅ Install Docker and Docker Compose on VPS
+2. ✅ Set up PostgreSQL database with migrations
+3. ✅ Configure Redis cache
+4. ✅ Build and deploy the application
+5. ✅ Set up Nginx reverse proxy
+6. ✅ Configure SSL certificate with Let's Encrypt
+7. ✅ Set up monitoring and health checks
+8. ✅ Configure automated backups
 
-## 📦 Installation
+### **Manual Configuration Steps**
 
-### Prerequisites
+After deployment, you'll need to:
 
-{{PREREQUISITES}}
-
-### Installation Steps
-
-1. **Clone the repository**
+1. **Configure Stripe Integration**:
    ```bash
-   git clone https://github.com/tiation/dice-roller-marketing-site.git
-   cd dice-roller-marketing-site
+   ssh user@your-vps
+   cd /opt/dnddiceroller
+   nano .env
+   ```
+   
+   Update these variables:
+   ```env
+   STRIPE_SECRET_KEY=sk_live_your_actual_key
+   STRIPE_PUBLISHABLE_KEY=pk_live_your_actual_key
+   STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret
    ```
 
-2. **Install dependencies**
-   ```bash
-   {{DETAILED_INSTALL_COMMANDS}}
+2. **Set up Stripe Webhook**:
+   - Go to Stripe Dashboard → Webhooks
+   - Add endpoint: `https://your-domain.com/api/v1/webhooks/stripe`
+   - Select events: `checkout.session.completed`, `customer.subscription.*`, `invoice.*`
+
+3. **Configure Email SMTP**:
+   ```env
+   SMTP_HOST=your-smtp-host
+   SMTP_USER=your-email@domain.com
+   SMTP_PASS=your-app-password
+   FROM_EMAIL=noreply@your-domain.com
    ```
 
-3. **Configuration**
+4. **Restart Services**:
    ```bash
-   {{CONFIG_COMMANDS}}
+   docker-compose -f docker-compose.prod.yml restart
    ```
 
----
+## 📊 **Monitoring & Management**
 
-## 🎯 Usage
+### **System Status Dashboard**
+```bash
+/opt/dnddiceroller/scripts/status.sh
+```
 
-### Basic Usage
+### **Health Checks**
+```bash
+/opt/dnddiceroller/scripts/health-check.sh
+```
 
-{{BASIC_USAGE}}
+### **View Logs**
+```bash
+docker-compose -f docker-compose.prod.yml logs -f
+```
 
-### Advanced Usage
+### **Database Backup**
+```bash
+# Manual backup
+/opt/dnddiceroller/scripts/backup.sh
 
-{{ADVANCED_USAGE}}
+# Restore from backup
+/opt/dnddiceroller/scripts/restore.sh latest
+```
 
-### Examples
+### **Update Application**
+```bash
+./deploy.sh update
+```
 
-{{USAGE_EXAMPLES}}
+## 🏗️ **Architecture**
 
----
+### **Backend Stack**
+- **Runtime**: Node.js 18+ with Express.js
+- **Database**: PostgreSQL 15 with Redis cache
+- **Authentication**: JWT with refresh tokens
+- **Payments**: Stripe subscriptions and webhooks
+- **Email**: SMTP with template system
+- **Logging**: Winston with structured logging
 
-## 📚 Documentation
+### **Frontend Stack**
+- **Framework**: React 18 with TypeScript
+- **Styling**: Tailwind CSS with custom animations
+- **State Management**: Zustand + React Query
+- **Charts**: Chart.js for analytics
+- **Real-time**: Socket.IO for multiplayer
 
-- **[User Guide](docs/user-guide.md)** - Complete user documentation
-- **[API Reference](docs/api-reference.md)** - Technical API documentation
-- **[Architecture](docs/architecture.md)** - System architecture overview
-- **[Deployment Guide](docs/deployment.md)** - Production deployment instructions
-- **[Developer Guide](docs/developer-guide.md)** - Development setup and guidelines
+### **Infrastructure**
+- **Containerization**: Docker with multi-stage builds
+- **Reverse Proxy**: Nginx with SSL termination
+- **SSL**: Let's Encrypt automatic certificates
+- **Monitoring**: Health checks with alerting
+- **Backups**: Automated PostgreSQL dumps
 
-### Live Documentation
+## 🔐 **Security Features**
 
-Visit our [GitHub Pages site](https://tiation.github.io/dice-roller-marketing-site) for interactive documentation.
+- **Security Headers**: CSP, HSTS, XSS protection
+- **Rate Limiting**: IP-based and user-based limits  
+- **Input Validation**: Comprehensive request validation
+- **SQL Injection Prevention**: Parameterized queries
+- **HTTPS Enforcement**: Automatic SSL redirects
+- **Audit Logging**: All admin actions logged
+- **Session Security**: HttpOnly cookies, CSRF protection
 
----
+## 📋 **API Documentation**
 
-## 📸 Screenshots
+### **Authentication**
+```bash
+# Register user
+curl -X POST https://your-domain.com/api/v1/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{"email":"user@example.com","password":"securepass","firstName":"John","lastName":"Doe"}'
 
-<div align="center">
-  <img src="assets/screenshots/main-interface.png" alt="Main Interface" width="800">
-  <p><em>Main application interface</em></p>
-</div>
+# Login
+curl -X POST https://your-domain.com/api/v1/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"user@example.com","password":"securepass"}'
+```
 
-<div align="center">
-  <img src="assets/screenshots/dashboard.png" alt="Dashboard" width="800">
-  <p><em>Analytics dashboard</em></p>
-</div>
+### **Dice Rolling**
+```bash
+# Roll dice with API key
+curl -X POST https://your-domain.com/api/v1/dice/roll \
+  -H "X-API-Key: your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{"dice":{"d20":2,"d6":3},"modifiers":{"bonus":5}}'
 
----
+# Quick roll
+curl -X POST https://your-domain.com/api/v1/dice/quick-roll/d20 \
+  -H "X-API-Key: your-api-key" \
+  -d '{"count":1,"modifier":3}'
+```
 
-## ❓ FAQ
+### **Subscription Management**
+```bash
+# Get current subscription
+curl https://your-domain.com/api/v1/subscriptions/current \
+  -H "Authorization: Bearer your-jwt-token"
 
-### General Questions
+# Create checkout session
+curl -X POST https://your-domain.com/api/v1/subscriptions/create-checkout-session \
+  -H "Authorization: Bearer your-jwt-token" \
+  -H "Content-Type: application/json" \
+  -d '{"planId":"pro","billingCycle":"monthly"}'
+```
 
-**Q: What makes this solution enterprise-grade?**
-A: Our solution includes comprehensive security, scalability, monitoring, and enterprise integration features with professional support.
+## 🛠️ **Development Setup**
 
-**Q: Is this compatible with existing systems?**
-A: Yes, we provide extensive API and integration capabilities for seamless system integration.
+### **Local Development**
+```bash
+# Clone repository
+git clone https://github.com/your-username/dice-roller-saas.git
+cd dice-roller-saas
 
-**Q: What support options are available?**
-A: We offer community support through GitHub Issues and professional enterprise support for commercial users.
+# Install dependencies
+npm install
+cd client && npm install && cd ..
 
-### Technical Questions
+# Set up environment
+cp .env.example .env
+# Edit .env with your configuration
 
-**Q: What are the system requirements?**
-A: {{SYSTEM_REQUIREMENTS}}
+# Start development servers
+docker-compose up -d postgres redis
+npm run dev
 
-**Q: How do I handle large scale deployments?**
-A: See our [Deployment Guide](docs/deployment.md) for enterprise-scale deployment strategies.
+# In another terminal
+cd client && npm run dev
+```
 
-**Q: Are there any security considerations?**
-A: Yes, please review our [Security Guide](docs/security.md) for comprehensive security best practices.
+### **Database Setup**
+```bash
+# Run migrations
+npm run migrate
 
-### Troubleshooting
+# Seed initial data
+npm run seed
+```
 
-**Q: Common installation issues**
-A: Check our [Troubleshooting Guide](docs/troubleshooting.md) for solutions to common problems.
+## 📈 **Scaling & Performance**
 
-**Q: Performance optimization**
-A: Refer to our [Performance Guide](docs/performance.md) for optimization strategies.
+### **Horizontal Scaling**
+- Load balancer compatible
+- Stateless application design
+- Redis for session sharing
+- Database read replicas support
 
----
+### **Performance Optimizations**
+- Connection pooling
+- Query optimization
+- Redis caching
+- CDN-ready static assets
+- Gzip compression
+- Browser caching headers
 
-## 🤝 Contributing
+### **Monitoring Integration**
+- Health check endpoints
+- Structured logging
+- Performance metrics
+- Error tracking ready (Sentry)
+- Uptime monitoring hooks
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+## 🤝 **Support & Contributing**
 
-### Development Setup
+### **Getting Help**
+- 📧 Email: admin@dnddiceroller.site
+- 🐛 Issues: GitHub Issues
+- 📖 Documentation: `/docs` endpoint
+- 💬 Community: Discord (link in app)
 
+### **Contributing**
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests
-5. Submit a pull request
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
 
-### Code of Conduct
-
-Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
-
----
-
-## 🆘 Support
-
-### Community Support
-
-- **GitHub Issues**: [Report bugs or request features](https://github.com/tiation/dice-roller-marketing-site/issues)
-- **Discussions**: [Join community discussions](https://github.com/tiation/dice-roller-marketing-site/discussions)
-- **Documentation**: [Browse our documentation](https://tiation.github.io/dice-roller-marketing-site)
-
-### Enterprise Support
-
-For enterprise customers, we offer:
-- Priority support
-- Custom development
-- Training and consultation
-- SLA guarantees
-
-Contact us at [tiatheone@protonmail.com](mailto:tiatheone@protonmail.com)
-
----
-
-## 🔮 Tiation Ecosystem
-
-This repository is part of the Tiation ecosystem. Explore related projects:
-
-- [🌟 Tiation Platform](https://github.com/tiation/tiation-ai-platform) - Enterprise AI platform
-- [🤖 AI Agents](https://github.com/tiation/tiation-ai-agents) - Intelligent automation
-- [⚡ Terminal Workflows](https://github.com/tiation/tiation-terminal-workflows) - Developer tools
-- [🐳 Docker Solutions](https://github.com/tiation/tiation-docker-debian) - Container orchestration
-- [📝 CMS](https://github.com/tiation/tiation-cms) - Content management system
-- [🐰 ChaseWhiteRabbit NGO](https://github.com/tiation/tiation-chase-white-rabbit-ngo) - Social impact initiatives
-- [🏗️ Infrastructure](https://github.com/tiation/tiation-rigger-infrastructure) - Enterprise infrastructure
-
----
-
-## 📄 License
+## 📄 **License**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
+## 🎲 **About**
 
-## 🌟 About Tiation
+Built with ❤️ for the D&D and tabletop RPG community. This enterprise-grade platform provides reliable, scalable dice rolling services for campaigns, tournaments, and applications.
 
-**Tiation** is a leading provider of enterprise-grade software solutions, specializing in automation, productivity, and system integration tools. Our mission is to empower organizations with cutting-edge technology that drives efficiency and innovation.
-
-### Our Solutions
-
-- **Automation Platform**: Comprehensive business process automation
-- **Developer Tools**: Professional development and deployment tools
-- **Enterprise Integration**: Seamless system integration solutions
-- **Security Framework**: Advanced security and compliance tools
-
-### Connect With Us
-
-- **Website**: [https://github.com/tiation](https://github.com/tiation)
-- **GitHub**: [https://github.com/tiation](https://github.com/tiation)
-- **LinkedIn**: [Tiation Company](https://linkedin.com/company/tiation)
-- **Twitter**: [@TiationTech](https://twitter.com/TiationTech)
+**Part of the Tiation GitHub ecosystem** - Professional tools for modern gaming.
 
 ---
 
-<div align="center">
-  <p>
-    <strong>Built with ❤️ by the Tiation Team</strong>
-  </p>
-  <p>
-    <a href="https://github.com/tiation">
-      <img src="https://img.shields.io/badge/Powered%20by-Tiation-cyan.svg" alt="Powered by Tiation">
-    </a>
-  </p>
-</div>
+⚡ **Ready to roll?** Deploy your own instance and start rolling dice at enterprise scale!
