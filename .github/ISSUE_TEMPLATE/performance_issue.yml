@@ -1,0 +1,140 @@
+name: ⚡ Performance Issue
+description: Report performance problems, bottlenecks, or optimization opportunities
+title: "[PERFORMANCE] "
+labels: ["performance", "needs-investigation", "type:performance"]
+assignees:
+  - tiatheone
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # ⚡ Performance Issue
+        
+        Help us identify and fix performance bottlenecks to keep the system running smoothly.
+        
+        > 📊 **Tip**: Include metrics and benchmarks when possible to help us understand the impact.
+        
+        ---
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Performance Impact
+      description: How severe is this performance issue?
+      options:
+        - Critical - System unusable/timeout
+        - High - Significantly impacts user experience
+        - Medium - Noticeable slowdown
+        - Low - Minor optimization opportunity
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Performance Issue Description
+      description: Describe the performance problem you're experiencing
+      placeholder: Clearly describe what is slow or performing poorly...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_performance
+    attributes:
+      label: Expected Performance
+      description: What performance did you expect?
+      placeholder: "e.g., Page should load in under 2 seconds, API response should be under 500ms"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_performance
+    attributes:
+      label: Actual Performance
+      description: What performance are you experiencing?
+      placeholder: "e.g., Page takes 8 seconds to load, API response takes 3-5 seconds"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this performance issue?
+      placeholder: |
+        1. Navigate to...
+        2. Perform action...
+        3. Measure...
+        4. Observe slow performance
+    validations:
+      required: true
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Performance Metrics
+      description: Include any performance metrics, profiling data, or benchmarks
+      placeholder: |
+        - Load time: 8.5s
+        - Time to first byte: 2.1s
+        - Memory usage: 850MB
+        - CPU usage: 85%
+      render: markdown
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Component
+      description: Which component is experiencing performance issues?
+      options:
+        - Frontend/UI
+        - Backend API
+        - Database
+        - File System
+        - Network/CDN
+        - Third-party Integration
+        - Build/CI Process
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Which environment is affected?
+      placeholder: "e.g., Production, Staging, Development"
+
+  - type: textarea
+    id: system_specs
+    attributes:
+      label: System Specifications
+      description: Hardware and software environment details
+      placeholder: |
+        - OS: Ubuntu 24.04
+        - RAM: 16GB
+        - CPU: Intel i7-12700K
+        - Browser: Chrome 120
+        - Network: 1Gbps fiber
+
+  - type: textarea
+    id: profiling
+    attributes:
+      label: Profiling Data
+      description: Include any profiling data, stack traces, or performance analysis
+      render: shell
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Performance Issue Checklist
+      description: Please confirm the following
+      options:
+        - label: I have checked that this issue occurs consistently
+          required: true
+        - label: I have tested in different environments/browsers where applicable
+          required: false
+        - label: I have searched for similar performance issues
+          required: true
+        - label: I agree to follow this project's Code of Conduct
+          required: true

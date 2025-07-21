@@ -1,0 +1,94 @@
+name: 🔒 Security Vulnerability Report
+description: Report a security vulnerability responsibly (use private reporting for sensitive issues)
+title: "[SECURITY] "
+labels: ["security", "urgent", "type:security"]
+assignees:
+  - tiatheone
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # 🔒 Security Vulnerability Report
+        
+        ⚠️ **IMPORTANT**: For sensitive security issues, please use GitHub's [private security advisory feature](https://github.com/security/advisories) instead of creating a public issue.
+        
+        📧 **Critical Issues**: For critical vulnerabilities, contact: tiatheone@protonmail.com
+        
+        > 🕵️ We appreciate responsible disclosure and will acknowledge your contribution appropriately.
+        
+        ---
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity Level
+      description: How severe is this security issue?
+      options:
+        - Critical - Immediate action required
+        - High - Action required soon
+        - Medium - Should be addressed
+        - Low - Minor security concern
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Vulnerability Description
+      description: Provide a clear description of the security vulnerability
+      placeholder: Describe the security issue without revealing sensitive exploitation details
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Vulnerability Category
+      description: What type of security vulnerability is this?
+      options:
+        - Authentication/Authorization
+        - Input Validation
+        - SQL Injection
+        - Cross-Site Scripting (XSS)
+        - Cross-Site Request Forgery (CSRF)
+        - Information Disclosure
+        - Denial of Service
+        - Configuration/Infrastructure
+        - Dependency Vulnerability
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact Assessment
+      description: What is the potential impact of this vulnerability?
+      placeholder: Describe potential consequences if this vulnerability were exploited
+
+  - type: textarea
+    id: affected
+    attributes:
+      label: Affected Components
+      description: Which parts of the system are affected?
+      placeholder: List affected files, modules, or system components
+
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Suggested Mitigation
+      description: Do you have suggestions for how to fix this vulnerability?
+      placeholder: Describe potential solutions or workarounds
+
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Responsible Disclosure
+      description: Please confirm your commitment to responsible disclosure
+      options:
+        - label: I will not publicly disclose details of this vulnerability until it has been addressed
+          required: true
+        - label: I have not shared details of this vulnerability with unauthorized parties
+          required: true
+        - label: I understand this may be moved to a private security advisory
+          required: true

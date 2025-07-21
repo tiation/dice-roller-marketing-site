@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Documentation
+    url: https://github.com/tiatheone/docs
+    about: Check our documentation for answers to common questions
+  - name: 💬 Discussions
+    url: https://github.com/orgs/tiatheone/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 🔐 Security Advisory
+    url: https://github.com/tiatheone/security/advisories/new
+    about: Report security vulnerabilities privately
+  - name: 📧 Direct Contact
+    url: mailto:tiatheone@protonmail.com
+    about: Contact the maintainer directly for urgent matters
