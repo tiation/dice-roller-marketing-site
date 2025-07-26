@@ -5,6 +5,8 @@ This directory contains screenshots of the D&D Dice Roller marketing site.
 ## Current Screenshots:
 
 - `hero-screenshot.png` - Hero section with dark neon theme
+- `player-view-updated.png` - Updated player interface showing dice rolling experience
+- `updated-dm-options.png` - Enhanced Dungeon Master interface with campaign management tools
 - `features-screenshot.png` - Features overview section (to be added)
 - `mobile-screenshot.png` - Mobile responsive view (to be added)
 

@@ -285,6 +285,20 @@ npm run seed
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 📸 **Screenshots**
+
+### Hero Section
+![Hero Screenshot](images/hero-screenshot.png)
+*Main landing page with dark neon theme and dice rolling interface*
+
+### Player View
+![Player View](images/player-view-updated.png)
+*Updated player interface showing the dice rolling experience*
+
+### DM Options
+![DM Options](images/updated-dm-options.png)
+*Enhanced Dungeon Master interface with advanced campaign management tools*
+
 ## 🎲 **About**
 
 Built with ❤️ for the D&D and tabletop RPG community. This enterprise-grade platform provides reliable, scalable dice rolling services for campaigns, tournaments, and applications.
